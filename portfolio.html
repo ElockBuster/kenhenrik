@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio - Cosmic Explorer</title>
+    <title>My Cosmic Portfolio - Rockets & Code</title>
     <style>
-        /* Cosmic theme: Dark space background with glowing elements */
+        /* Cosmic theme: Dark space background with glowing elements and rocket trail */
         body {
             margin: 0;
             font-family: 'Arial', sans-serif;
@@ -25,6 +25,20 @@
             background-repeat: repeat;
             background-size: 100px 100px;
             animation: twinkle 4s ease-in-out infinite alternate;
+        }
+        .rocket-trail {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(to top, rgba(255, 69, 0, 0.8), transparent);
+            transform: translateX(-50%);
+            animation: launch 10s linear infinite;
+        }
+        @keyframes launch {
+            0% { height: 0; opacity: 1; }
+            100% { height: 100%; opacity: 0; }
         }
         @keyframes twinkle {
             0% { opacity: 0.5; }
@@ -92,35 +106,36 @@
 </head>
 <body>
     <div class="stars"></div>
+    <div class="rocket-trail"></div>
     <header>
-        <h1>Welcome to My Cosmic Portfolio</h1>
-        <p>Exploring the universe of code, design, and innovation. I'm a developer who turns ideas into digital realities.</p>
+        <h1>Launching My Cosmic Portfolio</h1>
+        <p>Blasting off into the world of code, electronics, and space exploration. I'm an 18-year-old innovator passionate about programming, 3D-printing, rockets, and all things stellar.</p>
     </header>
     
     <section id="about">
         <h2>About Me</h2>
-        <p>Passionate about creating interactive experiences. With a background in web development, I specialize in front-end magic and back-end logic. Let's build something stellar together!</p>
+        <p>At 18, I'm diving deep into the universe of technology. From coding sleek apps to soldering circuits and launching 3D-printed rockets, I love turning wild ideas into reality. Whether it's electronics hacks or space-inspired projects, I'm always pushing boundaries—because why settle for Earth when you can aim for the stars?</p>
     </section>
     
     <section id="projects">
         <h2>My Projects</h2>
         <div class="projects">
             <div class="project">
-                <img src="https://via.placeholder.com/300x200/00d4ff/000?text=Project+1" alt="Project 1">
-                <h3>Stellar E-Commerce Site</h3>
-                <p>A responsive online store built with React and Node.js. Features include user authentication, payment integration, and a cosmic UI.</p>
-                <a href="#">View Live</a> | <a href="#">GitHub</a>
+                <img src="https://via.placeholder.com/300x200/00d4ff/000?text=Lightsaber+Flashlight" alt="Lightsaber Flashlight">
+                <h3>Lightsaber Flashlight</h3>
+                <p>A custom lightsaber-inspired flashlight I designed from scratch. I 3D-printed the hilt, soldered the electronics for LED lighting and sound effects, and added a rechargeable battery. It's a blend of Star Wars fandom and practical engineering—perfect for late-night adventures!</p>
+                <a href="#">View Demo Video</a> | <a href="#">GitHub/Files</a>
             </div>
             <div class="project">
                 <img src="https://via.placeholder.com/300x200/00d4ff/000?text=Project+2" alt="Project 2">
-                <h3>Galactic Task Manager</h3>
-                <p>A productivity app using Vue.js and Firebase. Manage tasks across planets with real-time collaboration and notifications.</p>
+                <h3>Rocket Trajectory Simulator</h3>
+                <p>A Python-based app using physics simulations to model rocket launches. Integrates with electronics sensors for real-world data, helping hobbyists optimize their builds for space exploration.</p>
                 <a href="#">View Live</a> | <a href="#">GitHub</a>
             </div>
             <div class="project">
                 <img src="https://via.placeholder.com/300x200/00d4ff/000?text=Project+3" alt="Project 3">
-                <h3>Nebula Data Viz Dashboard</h3>
-                <p>An interactive dashboard with D3.js for visualizing cosmic data. Pulls from APIs to display charts and insights in a nebula-inspired design.</p>
+                <h3>3D-Printed Space Habitat Model</h3>
+                <p>An interactive 3D model of a Mars habitat, printed and assembled with embedded electronics for lighting and sensors. Built with Arduino and designed in Fusion 360—exploring the future of off-world living.</p>
                 <a href="#">View Live</a> | <a href="#">GitHub</a>
             </div>
         </div>
